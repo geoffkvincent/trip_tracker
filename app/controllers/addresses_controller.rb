@@ -1,13 +1,13 @@
 class AddressesController < ApplicationController
   before_action :set_location
-  before_action :set_address
+  before_action :set_address, only: [:update, destroy]
 
   def index
     @addresses = Location.addresses
   end
 
   def create
-    @address = @location.addresses.new(address_params)
+    @address = @location.address.new(address_params)
 
     if @address.save
       render json: @address
@@ -24,7 +24,7 @@ class AddressesController < ApplicationController
   private
 
   def set_location
-    @location = Location.find(params[location_id])
+    @location = Location.find(params[:location_id])
   end
 
   def set_address

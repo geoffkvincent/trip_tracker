@@ -9,10 +9,10 @@ class LocationsController < ApplicationController
   def create
     location = @trip.locations.new(location_params)
 
-    if locations.save
+    if location.save
       render json: location
     else
-      render json: { errors: location.errors }
+      render json: { errors: @location.errors }
   end
 
   def update
