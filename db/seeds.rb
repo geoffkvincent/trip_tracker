@@ -1,15 +1,22 @@
 10.times do
-  trips.create(
-
+  Trips.create(
+    name: "My amazing #{Faker::Address.city} trip!"
   )
   5.times do
-    locations.create(
-
+    Locations.create(
+      name: Faker::Address.city,
+      days: Faker::Number.between(1, 10)
     )
     1.times do
-      address.create(
-
+      Address.create(
+        street: Faker::Address.street_address,
+        city: Faker::Address.city,
+        state: Faker::Address.state,
+        zip: Faker::Address.zip
       )
     end
   end
 end
+
+puts "seeded"
+
