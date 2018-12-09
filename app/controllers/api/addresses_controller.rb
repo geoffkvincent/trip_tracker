@@ -1,4 +1,4 @@
-class AddressesController < ApplicationController
+class Api::AddressesController < ApplicationController
   before_action :set_location
   before_action :set_address, only: [:update, destroy]
 
