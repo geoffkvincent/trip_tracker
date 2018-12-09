@@ -7,7 +7,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = @location.address.new(address_params)
+    @address = @location.addresses.new(address_params)
 
     if @address.save
       render json: @address

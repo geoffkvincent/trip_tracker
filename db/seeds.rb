@@ -3,12 +3,12 @@
     name: "My amazing #{Faker::Address.city} trip!"
   )
   5.times do
-    l = t.locations.create(
+   t.locations.create(
       name: Faker::Address.city,
       days: Faker::Number.between(1, 10)
     )
     1.times do
-      address.create(
+      Address.create(
         street: Faker::Address.street_address,
         city: Faker::Address.city,
         state: Faker::Address.state,
