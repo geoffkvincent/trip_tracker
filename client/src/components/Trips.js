@@ -8,7 +8,7 @@ class Trip extends React.Component {
   state = { locations: [] }
 
   componentDidMount() {
-    axios.get(`api/trips/${this.props.id}locations`)
+    axios.get(`api/trips/${this.props.id}/locations`)
       .then( res => this.setState({ locations: res.data }) )
   }
   render() {

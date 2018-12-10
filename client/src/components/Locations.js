@@ -1,7 +1,6 @@
 import React from 'react'
-import axios from 'axios'
 
-class Locations extends React.Component {
+const Locations = () => {
   
 
   render() {
