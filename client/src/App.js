@@ -7,7 +7,7 @@ const App = () => (
   <>
     <Switch>
       <Route exact path= '/' component={Trips}/>
-      <Route path= 'api/trips/:id/locaitons' component={Locations} />
+      <Route exact path= 'api/trips/:trip_id/locations' component={Locations} />
     </Switch>
   </>
 )

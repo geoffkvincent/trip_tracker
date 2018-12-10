@@ -1,16 +1,30 @@
 import React from 'react'
 import axios from 'axios'
+import Locations from './Locations'
 import {Link} from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 
-const Trip = ({ id, name }) => (
-  <div>
-    <h1>{name}</h1>
-      <Link to={`api/trips/${id}/locations`} >
-        <h3>Locations</h3>
-      </Link>
-  </div>
-)
+class Trip extends React.Component {
+  state = { locations: [] }
+
+  componentDidMount() {
+    axios.get(`api/trips/${this.props.id}locations`)
+      .then( res => this.setState({ locations: res.data }) )
+  }
+  render() {
+    const {id, name} = this.props
+    return (
+      <div>
+        <h1>{name}</h1>
+        <Link to={`api/trips/${id}/locations`} >
+          <h3>Locations</h3>
+        </Link>
+        <Locations tripId={id}/>
+      </div>
+    )
+  }
+ 
+}
 
 class Trips extends React.Component {
   state = { trips: [] }
