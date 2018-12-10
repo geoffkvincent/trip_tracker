@@ -4,9 +4,12 @@ import {Link} from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 
 const Trip = ({ id, name }) => (
-  <Link to={`api/trips/${id}/locations`} >
+  <div>
     <h1>{name}</h1>
-  </Link>
+      <Link to={`api/trips/${id}/locations`} >
+        <h3>Locations</h3>
+      </Link>
+  </div>
 )
 
 class Trips extends React.Component {
