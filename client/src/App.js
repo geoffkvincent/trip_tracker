@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Trips from './components/Trips'
-import Trip from './components/Trip'
+import Trip from './components/Locations'
 
 const App = () => (
   <>

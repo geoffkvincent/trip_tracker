@@ -1,7 +1,11 @@
 import React from 'react'
 import axios from 'axios'
-import Trip from './Trip'
+import Locations from './Locations'
 import { Container } from 'semantic-ui-react'
+
+const Trip = ({id, name, }) => (
+  <h1>{name}</h1>
+)
 
 class Trips extends React.Component {
   state = { trips: [] }
@@ -20,8 +24,7 @@ class Trips extends React.Component {
   render() {
     return (
       <Container>
-        {this.renderTrips}
-        <h1>hello</h1>
+        {this.renderTrips}  
       </Container>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-class Trip extends React.Component {
+class Locations extends React.Component {
   state = { locations: [] }
 
   componentDidMount() {
@@ -10,11 +10,11 @@ class Trip extends React.Component {
   }
 
   render() {
-    const {name, id} = this.props
+    
     return (
-      <div>{name}</div>
+      <div></div>
     )
   }
 }
 
-export default Trip;
+export default Locations;
