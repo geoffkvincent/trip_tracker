@@ -3,8 +3,8 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 
-const Trip = ({ name }) => (
-  <Link>
+const Trip = ({ id, name }) => (
+  <Link to={`api/trips/${id}/locations`} >
     <h1>{name}</h1>
   </Link>
 )
