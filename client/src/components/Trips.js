@@ -1,9 +1,12 @@
 import React from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 
-const Trip = ({id, name, }) => (
-  <h1>{name}</h1>
+const Trip = ({ name }) => (
+  <Link>
+    <h1>{name}</h1>
+  </Link>
 )
 
 class Trips extends React.Component {
