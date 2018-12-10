@@ -21,6 +21,7 @@ class Trips extends React.Component {
     return (
       <Container>
         {this.renderTrips}
+        <h1>hello</h1>
       </Container>
     )
   }
