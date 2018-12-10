@@ -1,14 +1,7 @@
 import React from 'react'
 
-const Locations = () => {
-  
-
-  render() {
-    
-    return (
-      <div></div>
-    )
-  }
-}
+const Locations = ({}) => (
+  <div></div>
+)
 
 export default Locations;
