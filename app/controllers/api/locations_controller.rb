@@ -3,7 +3,7 @@ class Api::LocationsController < ApplicationController
   before_action :set_location, only: [:update, :destroy]
 
   def index
-    @locations = @trip.locations
+    render json: @trip.locations
   end
 
   def create
@@ -13,6 +13,7 @@ class Api::LocationsController < ApplicationController
       render json: location
     else
       render json: { errors: @location.errors }
+    end
   end
 
   def update

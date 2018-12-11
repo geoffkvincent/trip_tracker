@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import Trip from './Trip'
 import { Container } from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
 
 class Trips extends React.Component {
   state = { trips: [] }
@@ -13,13 +14,14 @@ class Trips extends React.Component {
 
   renderTrip = () => {
     const {trips} = this.state
-    trips.map(trip => <Trip key={trip.id} {...trip} /> )
+    return trips.map(trip => <Trip key={trip.id} {...trip} /> )
   }
 
   render () {
+  
     return (
       <Container>
-        {this.renderTrip()}
+        {this.renderTrip()} 
       </Container>
     )
   }

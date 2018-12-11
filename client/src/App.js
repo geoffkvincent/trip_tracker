@@ -1,14 +1,14 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Trips from './components/Trips'
-import Trip from './components/Trip'
+import Locations from './components/Locations'
 
 
 const App = () => (
   <>
     <Switch>
       <Route exact path= '/' component={Trips} />
-      <Route path= '/trips/:id' component={Trip} />
+      <Route path='api/trips/:trip_id/locations' component={Locations} />
     </Switch>
   </>
 )
