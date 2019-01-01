@@ -18,7 +18,7 @@ class Trip extends React.Component {
     const {locations} = this.state
     return (
       <div>
-        <Link to={`api/trips/${id}/locations`}>
+        <Link to={`/trips/${id}/locations`}>
           <h1>{name}</h1>
         </Link>
         {locations.map(location => <Locations key={location.id} {...location} />)}
