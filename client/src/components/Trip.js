@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Locations from './Locations'
+// import Locations from './Locations'
 import {Link} from 'react-router-dom'
 import {  } from 'semantic-ui-react';
 
