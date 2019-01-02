@@ -1,7 +1,11 @@
 import React from 'react'
 
-const Locations = ({name}) => (
-  <h1>{name}</h1>
-)
+class Locations extends React.Component {
+  render() {
+    return(
+      null
+    )
+  }
+}
 
 export default Locations;
