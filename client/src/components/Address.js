@@ -5,7 +5,9 @@ class Address extends React.Component{
   state= { addresses: [] }
 
   componentDidMount() {
-    axios.get()
+    const {trip_id, location_id} = this.props.match.params
+    axios.get(`/trips/${trip_id}/locations/${location_id}/address`)
+      .then( res => this.setState({ addresses: res.data }))
   }
 
   render() {
