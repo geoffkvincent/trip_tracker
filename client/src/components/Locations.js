@@ -6,9 +6,9 @@ class Locations extends React.Component {
     return(
       <div>
         {locations.map(location =>
-          <ul>
-            <li key={location.id}>{location.name}</li>
-              <p>{location.name}</p>
+          <ul key={location.id}>
+            <li >{location.name}</li>
+              <p>{location.days}</p>
           </ul>
         )}
       </div>
