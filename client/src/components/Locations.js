@@ -6,12 +6,12 @@ class Locations extends React.Component {
 
   render() {
     const { locations } = this.props.location.state
-    const { url } = this.props.match
+    const { id } = this.props.match.params
     return(
       <div>
         {locations.map(location =>
           <ul key={location.id}>
-            <Link to={`/url/{location.id}`}>
+            <Link to={`/trips/${id}/locations/${location.id}/address`}>
               <li >{location.name}</li>
             </Link>
               <p>{location.days}</p>
